@@ -1,0 +1,89 @@
+🚀 Starting scrape for 2 page(s)...
+Scraping page: https://internshala.com/internships/work-from-home-internships/page-1
+Sent to Kafka: Law/Legal
+Sent to Kafka: Fundraising Volunteer
+Sent to Kafka: AI Dataset Contributor – IPhone Camera
+Sent to Kafka: Motion Graphics
+Sent to Kafka: Marketing & Sales
+Sent to Kafka: Management Trainee
+Sent to Kafka: Telugu Audio Recording (Native Speaker)
+Sent to Kafka: Law/Legal
+Sent to Kafka: Product Design
+Sent to Kafka: Law/Legal
+Sent to Kafka: Digital Marketing (Meme and Carousel Making)
+Sent to Kafka: UPSC Telegram Group Marketing Manager
+Sent to Kafka: Campus Ambassador
+Sent to Kafka: Accountant / Chartered Accountant Internship (Product Development Role)
+Sent to Kafka: Social Media & Customer Engagement Intern
+Sent to Kafka: Campus Ambassador
+Sent to Kafka: Subject Matter Expert (Physical Chemistry)
+Sent to Kafka: Graphic Designer
+Sent to Kafka: Telecalling
+Sent to Kafka: Telecalling
+Sent to Kafka: Online Event Management
+Sent to Kafka: Telecalling (Odia & Bengali)
+Sent to Kafka: B2B Cold Calling Expert
+Sent to Kafka: SaaS Growth Strategist
+Sent to Kafka: Appointment Setter
+Sent to Kafka: Business Development Representative
+Sent to Kafka: General Management
+Sent to Kafka: Sales Executive Intern
+Sent to Kafka: Product Marketing
+Sent to Kafka: LinkedIn Outreach Specialist (SDR)
+Sent to Kafka: Kannada Content Writer
+Sent to Kafka: Email Marketing Manager
+Sent to Kafka: Animation
+Sent to Kafka: Content & E-Commerce Management
+Sent to Kafka: Graphic Design
+Sent to Kafka: Data Entry
+Sent to Kafka: Data Scraping & Management
+Sent to Kafka: ReactJS Development
+Sent to Kafka: Social Media Marketing
+Sent to Kafka: Social Work
+Sent to Kafka: Virtual Volunteer
+Sent to Kafka: Social Media Marketing
+Sent to Kafka: Digital Marketing
+Sent to Kafka: Graphic Design
+Sent to Kafka: General Management
+Scraping page: https://internshala.com/internships/work-from-home-internships/page-2
+Sent to Kafka: UI/UX Design
+Sent to Kafka: WordPress Development
+Sent to Kafka: Backend Development
+Sent to Kafka: Social Media Marketing
+Sent to Kafka: Content Writing
+Sent to Kafka: Social Media Marketing
+Sent to Kafka: Digital Marketing
+Sent to Kafka: Digital Marketing - Internship Program
+Sent to Kafka: College Representative (Marketing)
+Sent to Kafka: Social Media Marketing
+Sent to Kafka: Digital Marketing
+Sent to Kafka: Social Media Marketing
+Sent to Kafka: Online Marketing
+Sent to Kafka: Marketing
+Sent to Kafka: WhatsApp Marketing
+Sent to Kafka: Business Development (Sales)
+Sent to Kafka: Graphics Design & Social Media Intern
+Sent to Kafka: UI/UX Designer
+Sent to Kafka: Video Editing/Making
+Sent to Kafka: Digital Marketing
+Sent to Kafka: Sales and Marketing
+Sent to Kafka: Operations
+Sent to Kafka: Influencer Outreach & Community Manager
+Sent to Kafka: Marketing
+Sent to Kafka: Sales and Marketing
+Sent to Kafka: Corporate Sales
+Sent to Kafka: Social Media Marketing
+Sent to Kafka: Level Designer
+Sent to Kafka: Graphic Design
+Sent to Kafka: Content Development (English)
+Sent to Kafka: Business Development (Sales)
+Sent to Kafka: Ruby On Rails Development
+Sent to Kafka: Video Editing/Making
+Sent to Kafka: Social Media
+Sent to Kafka: Shopify Theme Developer
+Sent to Kafka: Brand Management
+Sent to Kafka: Business Development (Sales)
+Sent to Kafka: Product Marketing
+Sent to Kafka: Business Development (Sales)
+Sent to Kafka: Sales Representative Manager – B2B Fashion Sales
+✅ Scraping and sending to Kafka complete.
