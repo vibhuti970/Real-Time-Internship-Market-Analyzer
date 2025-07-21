@@ -1,14 +1,17 @@
 import json
+import time
 from bs4 import BeautifulSoup
 from kafka import KafkaProducer
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
-import time
+# --- NEW IMPORTS ---
+from selenium.webdriver.chrome.service import Service as ChromeService
+from webdriver_manager.chrome import ChromeDriverManager
+# --- END NEW IMPORTS ---
 
 def create_kafka_producer():
-    # This function creates a connection to your running Kafka server
     return KafkaProducer(
         bootstrap_servers='localhost:9092',
         value_serializer=lambda v: json.dumps(v).encode('utf-8')
@@ -16,9 +19,17 @@ def create_kafka_producer():
 
 def scrape_and_produce(pages=1):
     producer = create_kafka_producer()
-    driver = webdriver.Chrome()
-    base_url = "https://internshala.com/internships/work-from-home-internships"
 
+    # --- UPDATED SELENIUM SETUP ---
+    # This will now automatically manage the ChromeDriver
+    chrome_options = webdriver.ChromeOptions()
+    chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--disable-gpu")
+    chrome_options.add_argument("--window-size=1920,1200")
+    driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=chrome_options)
+    # --- END UPDATED SETUP ---
+
+    base_url = "https://internshala.com/internships/work-from-home-internships"
     print(f"🚀 Starting scrape for {pages} page(s)...")
 
     for page in range(1, pages + 1):
@@ -39,7 +50,6 @@ def scrape_and_produce(pages=1):
 
         for card in internship_cards:
             try:
-                # Using the correct selectors from our previous analysis
                 title = card.find("h3", class_="job-internship-name").get_text(strip=True)
                 company = card.find("p", class_="company-name").get_text(strip=True)
                 location = card.find("div", class_="locations").get_text(strip=True)
@@ -51,24 +61,18 @@ def scrape_and_produce(pages=1):
                 link = "https://internshala.com" + card.get("data-href", "")
 
                 internship_record = {
-                    "Title": title,
-                    "Company": company,
-                    "Location": location,
-                    "Duration": duration,
-                    "Stipend": stipend,
-                    "Posted_Date": posted_date,
-                    "Link": link
+                    "Title": title, "Company": company, "Location": location,
+                    "Duration": duration, "Stipend": stipend,
+                    "Posted_Date": posted_date, "Link": link
                 }
                 
-                # This line sends the data to your Kafka server
                 producer.send('internship_postings', internship_record)
                 print(f"Sent to Kafka: {title}")
                 
             except Exception as e:
-                # Skips any cards that might be ads or have a different structure
                 continue
         
-        time.sleep(2) # A small delay to be respectful to the website
+        time.sleep(2)
 
     producer.flush()
     producer.close()
